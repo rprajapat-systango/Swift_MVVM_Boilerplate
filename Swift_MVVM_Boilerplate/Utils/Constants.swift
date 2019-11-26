@@ -13,4 +13,15 @@ struct Constants {
         static let verifyOTP = "segueToVerifyOtp"
         static let resetPassword = "segueToResetPassword"
     }
+    
+    struct Keys{
+        static let environment = "currentEnvironment"
+    }
+    
+    struct URLs{
+        static let production = "This is the Production base url"
+        static let testing = "This is the Testing base url"
+        static let development = "This is the Development base url"
+    }
+    
 }

@@ -17,6 +17,8 @@
 		DC1E55C32383BCF30012D77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1E55C12383BCF30012D77E /* LaunchScreen.storyboard */; };
 		DC1E55CE2383BCF30012D77E /* Swift_MVVM_BoilerplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E55CD2383BCF30012D77E /* Swift_MVVM_BoilerplateTests.swift */; };
 		DC1E55D92383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E55D82383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift */; };
+		DC46F265238D08FF005E70BA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC46F264238D08FF005E70BA /* Settings.bundle */; };
+		DC46F268238D0E9B005E70BA /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */; };
 		DC6FB7C72383C45300BB2ED3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */; };
 		DC6FB7C92383C4B900BB2ED3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6FB7C82383C4B900BB2ED3 /* SignUpViewController.swift */; };
 		DC80D67B2383D8F500EA5A05 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80D67A2383D8F500EA5A05 /* ForgotPasswordViewController.swift */; };
@@ -77,6 +79,8 @@
 		DC1E55D82383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_MVVM_BoilerplateUITests.swift; sourceTree = "<group>"; };
 		DC1E55DA2383BCF30012D77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC30E98815B01B80AE4918B1 /* Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateUITests/Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC46F264238D08FF005E70BA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DC6FB7C82383C4B900BB2ED3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DC80D67A2383D8F500EA5A05 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				DC1E55BF2383BCF30012D77E /* Assets.xcassets */,
 				DC1E55C42383BCF30012D77E /* Info.plist */,
 				DC1E55BC2383BCF00012D77E /* Swift_MVVM_Boilerplate.xcdatamodeld */,
+				DC46F264238D08FF005E70BA /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -240,6 +245,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		DC46F266238D0E69005E70BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DC6FB7C52383C2DD00BB2ED3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +268,7 @@
 		DC80D67C2383ECB300EA5A05 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DC46F266238D0E69005E70BA /* Helpers */,
 				DCA1BFB323856C7C00580709 /* Extentions */,
 				DCA1BFB423856C9200580709 /* Constants.swift */,
 			);
@@ -285,6 +299,7 @@
 				DC1E55AE2383BCF00012D77E /* Resources */,
 				4D0E3B35A19F819AC71033D7 /* [CP] Embed Pods Frameworks */,
 				EC4067CB022B1BB6901064CE /* [CP] Copy Pods Resources */,
+				DC46F269238D104C005E70BA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -387,6 +402,7 @@
 			files = (
 				DC1E55C32383BCF30012D77E /* LaunchScreen.storyboard in Resources */,
 				DCFA300A238C27A80025AD6D /* GoogleService-Info.plist in Resources */,
+				DC46F265238D08FF005E70BA /* Settings.bundle in Resources */,
 				DC1E55C02383BCF30012D77E /* Assets.xcassets in Resources */,
 				DC1E55BB2383BCF00012D77E /* Main.storyboard in Resources */,
 			);
@@ -545,6 +561,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DC46F269238D104C005E70BA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\n\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\nrm -Rf $BUILD_APP_DIR/Settings.bundle\nfi\n";
+		};
 		EC4067CB022B1BB6901064CE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +609,7 @@
 				DC80D67B2383D8F500EA5A05 /* ForgotPasswordViewController.swift in Sources */,
 				DCA1BFBB23858B6C00580709 /* ResetPasswordViewModel.swift in Sources */,
 				DCA1BFB923856F5500580709 /* VerifyOTPViewModel.swift in Sources */,
+				DC46F268238D0E9B005E70BA /* SettingsBundleHelper.swift in Sources */,
 				DCA1BFBD23858E7900580709 /* ResetPasswordViewController.swift in Sources */,
 				DCA1BFB2238553C900580709 /* ForgotPasswordViewModel.swift in Sources */,
 				DC6FB7C72383C45300BB2ED3 /* LoginViewController.swift in Sources */,
@@ -762,7 +796,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3XEBN76638;
 				INFOPLIST_FILE = Swift_MVVM_Boilerplate/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-Boilerplate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -780,7 +817,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3XEBN76638;
 				INFOPLIST_FILE = Swift_MVVM_Boilerplate/Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-Boilerplate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -798,7 +838,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift_MVVM_BoilerplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-BoilerplateTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -816,7 +860,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift_MVVM_BoilerplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-BoilerplateTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -832,7 +880,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift_MVVM_BoilerplateUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-BoilerplateUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -848,7 +900,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Swift_MVVM_BoilerplateUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.systango.Swift-MVVM-BoilerplateUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
