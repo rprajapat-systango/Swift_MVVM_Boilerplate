@@ -15,6 +15,8 @@ struct LoginViewModel{
     let usernameErrorMessage = "Entered Username is invalid"
     let passwordErrorMessage = "Password length must be in range 6-10 characters."
     
+    let loginService = LoginService()
+    
     func validateInput(_ username:String?, password:String?, complition: (Bool, String?) -> ()){
         if let username = username{
             if username.count == 0 { // If username is empty
@@ -49,13 +51,17 @@ struct LoginViewModel{
         return (text.count >= range.0) && (text.count <= range.1)
     }
     
-    func login(_ request:LoginRequestModel , complition: @escaping (LoginResponseModel)->()){
-        let params = request.getParams()
+    func login(_ requestModel:LoginRequestModel , complition: @escaping (LoginResponseModel)->()){
+        let params = requestModel.getParams()
         print("Input:\(params)")
         var responseModel = LoginResponseModel()
         responseModel.success = true;
         responseModel.successMessage = "User logged in successfully"
         complition(responseModel)
+        
+        loginService.login(requestModel: requestModel) { (responseModel) in
+            print(responseModel.successMessage ?? "no response message")
+        }
     }
 }
 

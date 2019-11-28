@@ -27,6 +27,8 @@
 		DC80D682238414C400EA5A05 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80D681238414C400EA5A05 /* LoginViewModel.swift */; };
 		DC80D6842384247100EA5A05 /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80D6832384247100EA5A05 /* UIViewControllerExtention.swift */; };
 		DC80D68623842CAC00EA5A05 /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC80D68523842CAC00EA5A05 /* StringExtention.swift */; };
+		DC8F243E238E945D004B6177 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F243D238E945D004B6177 /* NetworkManager.swift */; };
+		DC8F2441238E9481004B6177 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F2440238E9481004B6177 /* LoginService.swift */; };
 		DCA1BFAF23853D0B00580709 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFAE23853D0B00580709 /* SignUpViewModel.swift */; };
 		DCA1BFB2238553C900580709 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFB1238553C900580709 /* ForgotPasswordViewModel.swift */; };
 		DCA1BFB523856C9200580709 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFB423856C9200580709 /* Constants.swift */; };
@@ -89,6 +91,8 @@
 		DC80D681238414C400EA5A05 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DC80D6832384247100EA5A05 /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		DC80D68523842CAC00EA5A05 /* StringExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
+		DC8F243D238E945D004B6177 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DC8F2440238E9481004B6177 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		DCA1BFAE23853D0B00580709 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		DCA1BFB1238553C900580709 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		DCA1BFB423856C9200580709 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 		DC1E55B22383BCF00012D77E /* Swift_MVVM_Boilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				DC8F243C238E939A004B6177 /* Networking */,
 				DCFA3009238C27A80025AD6D /* GoogleService-Info.plist */,
 				DC1E55E62383BD840012D77E /* AppDelegate */,
 				DC80D67C2383ECB300EA5A05 /* Utils */,
@@ -273,6 +278,23 @@
 				DCA1BFB423856C9200580709 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DC8F243C238E939A004B6177 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC8F243F238E9462004B6177 /* Services */,
+				DC8F243D238E945D004B6177 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC8F243F238E9462004B6177 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC8F2440238E9481004B6177 /* LoginService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		DCA1BFB323856C7C00580709 /* Extentions */ = {
@@ -612,6 +634,8 @@
 				DC46F268238D0E9B005E70BA /* SettingsBundleHelper.swift in Sources */,
 				DCA1BFBD23858E7900580709 /* ResetPasswordViewController.swift in Sources */,
 				DCA1BFB2238553C900580709 /* ForgotPasswordViewModel.swift in Sources */,
+				DC8F243E238E945D004B6177 /* NetworkManager.swift in Sources */,
+				DC8F2441238E9481004B6177 /* LoginService.swift in Sources */,
 				DC6FB7C72383C45300BB2ED3 /* LoginViewController.swift in Sources */,
 				DC1E55BE2383BCF00012D77E /* Swift_MVVM_Boilerplate.xcdatamodeld in Sources */,
 				DCA1BFB523856C9200580709 /* Constants.swift in Sources */,

@@ -22,6 +22,11 @@ class Swift_MVVM_BoilerplateTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let loginVM = LoginViewModel()
+        loginVM.validateInput("abcdef@fgh.ijk", password: "123456") { (success, message) in
+            XCTAssertTrue(success)
+            XCTAssertEqual(message, nil)
+        }
     }
 
     func testPerformanceExample() {
