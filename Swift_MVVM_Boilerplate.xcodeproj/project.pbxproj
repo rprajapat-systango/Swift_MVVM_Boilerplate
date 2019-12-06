@@ -179,9 +179,9 @@
 		DC1E55B22383BCF00012D77E /* Swift_MVVM_Boilerplate */ = {
 			isa = PBXGroup;
 			children = (
-				DC8F243C238E939A004B6177 /* Networking */,
 				DCFA3009238C27A80025AD6D /* GoogleService-Info.plist */,
 				DC1E55E62383BD840012D77E /* AppDelegate */,
+				DC8F243C238E939A004B6177 /* Networking */,
 				DC80D67C2383ECB300EA5A05 /* Utils */,
 				DC1E55E92383BDD00012D77E /* Controllers */,
 				DC6FB7C52383C2DD00BB2ED3 /* ViewModels */,
