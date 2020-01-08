@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func registerForRemoteNotification(_ application:UIApplication){
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
-            UNUserNotificationCenter.current().delegate = self as! UNUserNotificationCenterDelegate
+          UNUserNotificationCenter.current().delegate = self
 
           let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
           UNUserNotificationCenter.current().requestAuthorization(
@@ -110,8 +110,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
         print("Do what ever you want")
-
     }
+    
 }
 
 extension AppDelegate : MessagingDelegate{

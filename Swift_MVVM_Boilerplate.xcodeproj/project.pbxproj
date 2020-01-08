@@ -320,7 +320,6 @@
 				DC1E55AD2383BCF00012D77E /* Frameworks */,
 				DC1E55AE2383BCF00012D77E /* Resources */,
 				4D0E3B35A19F819AC71033D7 /* [CP] Embed Pods Frameworks */,
-				EC4067CB022B1BB6901064CE /* [CP] Copy Pods Resources */,
 				DC46F269238D104C005E70BA /* ShellScript */,
 			);
 			buildRules = (
@@ -340,8 +339,6 @@
 				DC1E55C52383BCF30012D77E /* Sources */,
 				DC1E55C62383BCF30012D77E /* Frameworks */,
 				DC1E55C72383BCF30012D77E /* Resources */,
-				0DC30A19806A8834B6DA6391 /* [CP] Embed Pods Frameworks */,
-				86B2441560F3261E166EB8AE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,8 +358,6 @@
 				DC1E55D02383BCF30012D77E /* Sources */,
 				DC1E55D12383BCF30012D77E /* Frameworks */,
 				DC1E55D22383BCF30012D77E /* Resources */,
-				7779EFB2029646779C09C715 /* [CP] Embed Pods Frameworks */,
-				9AA47492A2417B75F8826802 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,21 +442,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DC30A19806A8834B6DA6391 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateTests/Pods-Swift_MVVM_BoilerplateTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		162DEB279403401FA5129E02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,51 +465,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7779EFB2029646779C09C715 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateUITests/Pods-Swift_MVVM_BoilerplateUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86B2441560F3261E166EB8AE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateTests/Pods-Swift_MVVM_BoilerplateTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D4371405E06269D6C9813E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -548,21 +493,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AA47492A2417B75F8826802 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateUITests/Pods-Swift_MVVM_BoilerplateUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC2CA3CC5BEEFA8816695948 /* [CP] Check Pods Manifest.lock */ = {
@@ -599,21 +529,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "BUILD_APP_DIR=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\n\nif [ \"$CONFIGURATION\" == \"Release\" ]; then\nrm -Rf $BUILD_APP_DIR/Settings.bundle\nfi\n";
-		};
-		EC4067CB022B1BB6901064CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

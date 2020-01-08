@@ -12,6 +12,7 @@ target 'Swift_MVVM_Boilerplate' do
   pod 'Fabric'
   pod 'Crashlytics'
   
+  pod "KRProgressHUD"
   # Pods for Swift_MVVM_Boilerplate
 
   target 'Swift_MVVM_BoilerplateTests' do

@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Swift_MVVM_Boilerplate/Pods-Swift_MVVM_Boilerplate-frameworks.sh
+${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework
+${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework
+${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework
+${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

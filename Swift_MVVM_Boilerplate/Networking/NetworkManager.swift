@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 enum RequestType:String {
     case get
@@ -21,6 +22,10 @@ class NetworkManager: NSObject {
         request.httpMethod = type.rawValue.uppercased()
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         
+        /**Put additional header in request
+         request.setValue("ACCESS TOKEN STRING FOR AUTHENTICATE REQUEST", forHTTPHeaderField: "access_token")
+        */
+        
         // If request type is post, then paramaters must be set in the request
         if let params = params{
             guard let httpBody = try? JSONSerialization.data(withJSONObject: params, options: []) else {
@@ -28,8 +33,10 @@ class NetworkManager: NSObject {
             }
             request.httpBody = httpBody
         }
-        
+//        KRProgressHUD.show()
+        KRProgressHUD.showWarning()
         let task = session.dataTask(with: request) { (data, response, error) in
+            KRProgressHUD.dismiss()
             if let error = error {
                 //
                 complition(error)
