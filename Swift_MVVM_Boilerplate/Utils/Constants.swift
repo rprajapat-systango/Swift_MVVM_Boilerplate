@@ -30,6 +30,7 @@ struct Constants {
     
     struct message {
         static let invalidUrl = "Invalid Url"
+        static let logoutWarning = "Are you sure you want to logout?"
     }
     
 }

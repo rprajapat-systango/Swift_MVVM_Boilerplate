@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		DC1E55C32383BCF30012D77E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1E55C12383BCF30012D77E /* LaunchScreen.storyboard */; };
 		DC1E55CE2383BCF30012D77E /* Swift_MVVM_BoilerplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E55CD2383BCF30012D77E /* Swift_MVVM_BoilerplateTests.swift */; };
 		DC1E55D92383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1E55D82383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift */; };
+		DC1F846823C89D9600D23752 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1F846723C89D9600D23752 /* SideMenuTableViewController.swift */; };
+		DC44D2A123C70E87006A3B30 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC44D2A023C70E87006A3B30 /* Dashboard.storyboard */; };
+		DC44D2A323C75402006A3B30 /* RedirectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC44D2A223C75402006A3B30 /* RedirectionHelper.swift */; };
 		DC46F265238D08FF005E70BA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DC46F264238D08FF005E70BA /* Settings.bundle */; };
 		DC46F268238D0E9B005E70BA /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */; };
 		DC6FB7C72383C45300BB2ED3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */; };
@@ -36,6 +39,7 @@
 		DCA1BFB923856F5500580709 /* VerifyOTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFB823856F5500580709 /* VerifyOTPViewModel.swift */; };
 		DCA1BFBB23858B6C00580709 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFBA23858B6C00580709 /* ResetPasswordViewModel.swift */; };
 		DCA1BFBD23858E7900580709 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1BFBC23858E7900580709 /* ResetPasswordViewController.swift */; };
+		DCCD1AD823C768D8004DD775 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD1AD723C768D8004DD775 /* HomeViewController.swift */; };
 		DCFA300A238C27A80025AD6D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCFA3009238C27A80025AD6D /* GoogleService-Info.plist */; };
 		F4E22905DEAA7146C4F41883 /* Pods_Swift_MVVM_BoilerplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4631FAD28BEC21F85FCC69AC /* Pods_Swift_MVVM_BoilerplateTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,7 +84,10 @@
 		DC1E55D42383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift_MVVM_BoilerplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1E55D82383BCF30012D77E /* Swift_MVVM_BoilerplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_MVVM_BoilerplateUITests.swift; sourceTree = "<group>"; };
 		DC1E55DA2383BCF30012D77E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1F846723C89D9600D23752 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		DC30E98815B01B80AE4918B1 /* Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_MVVM_BoilerplateUITests/Pods-Swift_MVVM_BoilerplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC44D2A023C70E87006A3B30 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		DC44D2A223C75402006A3B30 /* RedirectionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectionHelper.swift; sourceTree = "<group>"; };
 		DC46F264238D08FF005E70BA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		DCA1BFB823856F5500580709 /* VerifyOTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPViewModel.swift; sourceTree = "<group>"; };
 		DCA1BFBA23858B6C00580709 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		DCA1BFBC23858E7900580709 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		DCCD1AD723C768D8004DD775 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCFA3009238C27A80025AD6D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +242,7 @@
 			children = (
 				DC1E55B92383BCF00012D77E /* Main.storyboard */,
 				DC1E55C12383BCF30012D77E /* LaunchScreen.storyboard */,
+				DC44D2A023C70E87006A3B30 /* Dashboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -241,19 +250,26 @@
 		DC1E55E92383BDD00012D77E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */,
-				DC6FB7C82383C4B900BB2ED3 /* SignUpViewController.swift */,
-				DC80D67A2383D8F500EA5A05 /* ForgotPasswordViewController.swift */,
-				DCA1BFB623856E6F00580709 /* VerifyOtpViewController.swift */,
-				DCA1BFBC23858E7900580709 /* ResetPasswordViewController.swift */,
+				DC1F846623C89D5200D23752 /* SideMenu */,
+				DCCD1AD623C76886004DD775 /* Login Signup */,
+				DCCD1AD723C768D8004DD775 /* HomeViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DC1F846623C89D5200D23752 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DC1F846723C89D9600D23752 /* SideMenuTableViewController.swift */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		DC46F266238D0E69005E70BA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				DC46F267238D0E9B005E70BA /* SettingsBundleHelper.swift */,
+				DC44D2A223C75402006A3B30 /* RedirectionHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +322,18 @@
 				DC80D68523842CAC00EA5A05 /* StringExtention.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DCCD1AD623C76886004DD775 /* Login Signup */ = {
+			isa = PBXGroup;
+			children = (
+				DC6FB7C62383C45300BB2ED3 /* LoginViewController.swift */,
+				DC6FB7C82383C4B900BB2ED3 /* SignUpViewController.swift */,
+				DC80D67A2383D8F500EA5A05 /* ForgotPasswordViewController.swift */,
+				DCA1BFB623856E6F00580709 /* VerifyOtpViewController.swift */,
+				DCA1BFBC23858E7900580709 /* ResetPasswordViewController.swift */,
+			);
+			path = "Login Signup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC1E55C32383BCF30012D77E /* LaunchScreen.storyboard in Resources */,
+				DC44D2A123C70E87006A3B30 /* Dashboard.storyboard in Resources */,
 				DCFA300A238C27A80025AD6D /* GoogleService-Info.plist in Resources */,
 				DC46F265238D08FF005E70BA /* Settings.bundle in Resources */,
 				DC1E55C02383BCF30012D77E /* Assets.xcassets in Resources */,
@@ -543,7 +572,10 @@
 				DC80D6842384247100EA5A05 /* UIViewControllerExtention.swift in Sources */,
 				DC1E55B62383BCF00012D77E /* SceneDelegate.swift in Sources */,
 				DC80D6802384103700EA5A05 /* UIButtonExtention.swift in Sources */,
+				DCCD1AD823C768D8004DD775 /* HomeViewController.swift in Sources */,
+				DC1F846823C89D9600D23752 /* SideMenuTableViewController.swift in Sources */,
 				DC80D67B2383D8F500EA5A05 /* ForgotPasswordViewController.swift in Sources */,
+				DC44D2A323C75402006A3B30 /* RedirectionHelper.swift in Sources */,
 				DCA1BFBB23858B6C00580709 /* ResetPasswordViewModel.swift in Sources */,
 				DCA1BFB923856F5500580709 /* VerifyOTPViewModel.swift in Sources */,
 				DC46F268238D0E9B005E70BA /* SettingsBundleHelper.swift in Sources */,

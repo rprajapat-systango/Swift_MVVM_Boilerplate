@@ -15,7 +15,7 @@ enum RequestType:String {
 }
 
 class NetworkManager: NSObject {
-    func request(_ serviceUrl:URL, type:RequestType = .get, params:[String:Any]? = [:], complition: @escaping (Any)->()){
+    func request(_ serviceUrl:URL, type:RequestType = .get, params:[String:Any]? = [:],  loadingMessage : String? = nil,  complition: @escaping (Any)->()){
         var request = URLRequest(url: serviceUrl)
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
@@ -33,15 +33,20 @@ class NetworkManager: NSObject {
             }
             request.httpBody = httpBody
         }
-//        KRProgressHUD.show()
-        KRProgressHUD.showWarning()
+
+        if let message = loadingMessage {
+            KRProgressHUD.show(withMessage: message)
+        }else{
+            KRProgressHUD.show()
+        }
+
         let task = session.dataTask(with: request) { (data, response, error) in
             KRProgressHUD.dismiss()
             if let error = error {
-                //
                 complition(error)
-                return;
+                return
             }
+            
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: [.allowFragments])

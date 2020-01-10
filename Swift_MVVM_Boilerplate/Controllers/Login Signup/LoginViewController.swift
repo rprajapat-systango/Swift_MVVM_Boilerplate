@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.text = "abe@gmail.com"
+        passwordTextField.text = "jfkldjeee"
         configureView()
         // Do any additional setup after loading the view.
     }
@@ -42,6 +44,11 @@ class LoginViewController: UIViewController {
     private func performAPICall(){
         let request = LoginRequestModel(username: emailTextField.text!, password: passwordTextField.text!)
         viewModel.login(request) { (responseModel) in
+            if(responseModel.success){
+                RedirectionHelper.redirectToDashboard()
+            }else{
+
+            }
         }
     }
 }

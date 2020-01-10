@@ -13,6 +13,12 @@ target 'Swift_MVVM_Boilerplate' do
   pod 'Crashlytics'
   
   pod "KRProgressHUD"
+  
+  pod 'SideMenu'
+  
+  pod 'IQKeyboardManager'
+
+  pod 'Kingfisher'
   # Pods for Swift_MVVM_Boilerplate
 
   target 'Swift_MVVM_BoilerplateTests' do
