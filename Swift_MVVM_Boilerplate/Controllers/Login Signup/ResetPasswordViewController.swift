@@ -12,7 +12,6 @@ class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var resetPasswordButton: UIButton!
-    
     var viewModel = ResetPasswordViewModel()
     
     override func viewDidLoad() {
@@ -47,6 +46,9 @@ class ResetPasswordViewController: UIViewController {
             if responseModel.success{
                 self.showAlert("Success", message: responseModel.successMessage!, actions: ["Done"]) { (title) in
                     print(responseModel.successMessage!)
+                    DispatchQueue.main.async {
+                        RedirectionHelper.redirectToLogin()
+                    }
                 }
             }else{
                 print(responseModel.errorMessage ?? "No error message")
@@ -54,7 +56,6 @@ class ResetPasswordViewController: UIViewController {
         }
     }
 }
-
 
 extension ResetPasswordViewController : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -66,4 +67,3 @@ extension ResetPasswordViewController : UITextFieldDelegate{
         return true;
     }
 }
-

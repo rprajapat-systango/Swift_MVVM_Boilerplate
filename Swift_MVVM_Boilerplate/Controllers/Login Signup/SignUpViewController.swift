@@ -49,6 +49,9 @@ class SignUpViewController: UIViewController {
             if responseModel.success{
                 self.showAlert("Success", message: responseModel.successMessage!, actions: ["Done"]) { (title) in
                     print(responseModel.successMessage!)
+                    DispatchQueue.main.async {
+                        RedirectionHelper.redirectToDashboard()
+                    }
                 }
             }else{
                 print(responseModel.errorMessage ?? "No error message")
