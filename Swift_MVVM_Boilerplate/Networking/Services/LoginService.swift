@@ -13,7 +13,16 @@ class LoginService: NSObject {
         let params = requestModel.getParams()
         
         NetworkManager().request(Constants.URLs.loginEndPoint, type: .post, params: params,  loadingMessage:"Logging...") { (response) in
-                
+            //parsing the response
+            if let err = response as? Error{
+                let model = LoginResponseModel.init(success: false, errorMessage: err.localizedDescription, successMessage: nil, data: nil)
+                complition(model)
+            }else if let dict = response as? [String : Any]{
+                let message = dict["message"] ?? "Login successful";
+                let object = dict["data"] ?? [String:Any]();
+                let model = LoginResponseModel.init(success: true, errorMessage: nil, successMessage: message as? String, data: object)
+                complition(model)
+            }
         }
     }
 }
