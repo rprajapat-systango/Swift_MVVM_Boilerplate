@@ -15,19 +15,40 @@ enum RequestType:String {
 }
 
 class NetworkManager: NSObject {
-    func request(_ serviceUrl:URL, type:RequestType = .get, params:[String:Any]? = [:],  loadingMessage : String? = nil,  complition: @escaping (Any)->()){
-        var request = URLRequest(url: serviceUrl)
+    func request(_ endpoint:String, type:RequestType = .get, params:[String:Any]? = [:],  loadingMessage : String? = nil,  complition: @escaping (Any)->()){
+        var url = Constants.URLs.baseUrl + endpoint;
+
+        if let dictParams = params, type == .get{
+            let queries = dictParams.map{ (arg) -> String in
+                let (key, value) = arg
+                return "\(key)=\(value)";
+            }
+            let queryParams = queries.joined(separator: "&")
+            if queryParams.count > 0{
+                url = url + "?\(queryParams)"
+            }
+        }
+        
+        guard let serviceURL = URL.init(string: url) else {
+            var response = LoginResponseModel()
+            response.errorMessage = Constants.message.invalidUrl
+            complition(response)
+            return
+        }
+
+        var request = URLRequest(url: serviceURL)
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         request.httpMethod = type.rawValue.uppercased()
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         
-        /**Put additional header in request
+        /**
+         Put additional header in request
          request.setValue("ACCESS TOKEN STRING FOR AUTHENTICATE REQUEST", forHTTPHeaderField: "access_token")
         */
-        
+
         // If request type is post, then paramaters must be set in the request
-        if let params = params{
+        if let params = params , type == .post{
             guard let httpBody = try? JSONSerialization.data(withJSONObject: params, options: []) else {
                 return
             }

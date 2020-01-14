@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView{
+extension UIButton{
     func configure(_ cornerRadius: CGFloat, borderColor: UIColor) {
         self.layer.borderWidth = 1.0;
         self.layer.borderColor = borderColor.cgColor;

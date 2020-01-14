@@ -19,10 +19,8 @@ struct Constants {
     }
     
     struct URLs{
-        static let baseUrl = "https://google.com"
-        static let loginEndPoint = ""
-        
-        
+        static let baseUrl = "http://localhost:8080/systango-boilerplate-swift-mvvm.com/"
+        static let loginEndPoint = "login"
         static let production = "This is the Production base url"
         static let testing = "This is the Testing base url"
         static let development = "This is the Development base url"
